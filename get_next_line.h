@@ -6,7 +6,7 @@
 /*   By: asacchin <alesacchi1907@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 19:58:28 by asacchin          #+#    #+#             */
-/*   Updated: 2023/02/07 11:56:17 by asacchin         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:22:37 by asacchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-char	*get_next_line(int fd);
+int	*get_next_line(int fd);
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 5
