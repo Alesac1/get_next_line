@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asacchin <alesacchi1907@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/13 13:20:16 by asacchin          #+#    #+#             */
-/*   Updated: 2023/02/13 13:20:20 by asacchin         ###   ########.fr       */
+/*   Created: 2023/02/13 13:20:34 by asacchin          #+#    #+#             */
+/*   Updated: 2023/02/13 13:20:35 by asacchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int	ft_strlen(char *s)
 {
@@ -53,15 +53,16 @@ char	*ft_strjoin(char *s1, char *s2)
 		s1 = (char *)malloc(sizeof(char) * 1);
 		s1[0] = '\0';
 	}
-	if (!s2)
+	if (!s1 || !s2)
 		return (NULL);
 	out = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!out)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s1[i])
-		out[j++] = s1[i++];
+	if (s1)
+		while (s1[i])
+			out[j++] = s1[i++];
 	i = 0;
 	while (s2[i])
 		out[j++] = s2[i++];
